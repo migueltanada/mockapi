@@ -33,5 +33,3 @@ build/
 .vscode/
 
 m2/
-values.yaml
-values.yml
