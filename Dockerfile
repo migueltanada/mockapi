@@ -19,4 +19,4 @@ COPY --from=builder /build/app.jar app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "${JAVA_OPTS}" , "-jar", "app.jar", "${APP_OPTS}"]

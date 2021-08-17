@@ -24,10 +24,20 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      volumes:
+      - name: applicationproperties
+        configMap:
+          name: {{ include "mockapi-helm.fullname" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+          - configMapRef:
+              name: {{ include "mockapi-helm.fullname" . }}
+          volumeMounts:
+          - name: applicationproperties
+            mountPath: /usr/src/myapp/application.properties 
           ports:
             - name: http
               containerPort: 8080

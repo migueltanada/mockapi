@@ -1,0 +1,1 @@
+-Dspring.config.location=application.properties
