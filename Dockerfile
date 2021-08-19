@@ -19,4 +19,7 @@ COPY --from=builder /build/app.jar app.jar
 
 EXPOSE 8080
 
+ENV APP_OPTS
+ENV JAVA_OPTS
+
 CMD ["java", "${JAVA_OPTS}" , "-jar", "app.jar", "${APP_OPTS}"]
