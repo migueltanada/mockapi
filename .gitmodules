@@ -1,0 +1,3 @@
+[submodule "helm_repo"]
+	path = helm_repo
+	url = https://github.com/migueltanada/helm_repo.git
