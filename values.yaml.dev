@@ -4,6 +4,7 @@
 
 configmaps:
   env: dev
+  enable: true
 
 replicaCount: 1
 

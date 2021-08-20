@@ -4,6 +4,7 @@
 
 configmaps:
   env: sit
+  enable: true
 
 replicaCount: 1
 

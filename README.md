@@ -113,13 +113,14 @@ Assuming:
 - chart name: mockapi
 - helm repo: https://github.com/migueltanada/helm_repo.git
 
-1. ~~By chart reference: helm install mymaria example/mariadb~~
-1. By path to a packaged chart: helm install release1 ./mockapi-1.1.1.tgz
-    - but first you hab to helm package that shit firt
-1. By path to an unpacked chart directory: helm install release1 helm\_repo/mockapi
-1. ~~By absolute URL: helm install release1 <to follow nalang HEHE>
-1. By chart reference and repo url: helm install --repo https://github.com/migueltanada/helm_repo release1 mockapi
+1. By chart reference ``helm template release1 helm_repo/mockapi --set configmaps.env=sit,configmaps.enable=false``
+1. By path to a packaged chart: ``helm install release1 ./mockapi-0.1.0.tgz``
+1. By path to an unpacked chart directory: ``helm install release1 helm_repo/mockapi``
+1. By absolute URL: ``helm install release1 https://github.com/migueltanada/helm_repo/blob/master/mockapi-0.1.0.tgz.sample?raw=true``
+1. By chart reference and repo url: ``helm install --repo https://github.com/migueltanada/helm_repo release1 mockapi``
 
+## Set which config to read/create config
+``--set configmaps.env=sit,configmaps.enable=false``
 
 ## build
 1. ``docker build -t <image-name> .``
