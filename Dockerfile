@@ -22,4 +22,4 @@ EXPOSE 8080
 ENV APP_OPTS=""
 ENV JAVA_OPTS=""
 
-CMD ["java", "${JAVA_OPTS}" , "-jar", "app.jar", "${APP_OPTS}"]
+CMD ["sh", "-c", "java ${JAVA_OPTS} -jar app.jar ${APP_OPTS}"]
