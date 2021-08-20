@@ -126,4 +126,15 @@ Assuming:
 1. ``docker build -t <image-name> .``
 2. ``docker push <image-name>``
 
+## Sample quick install
+```bash
 
+# Install ingress if (optional)
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
+helm install ingress-nginx ingress-nginx/ingress-nginx --create-namespace --namespace dev
+
+
+# Install app
+helm install latest helm_repo/mockapi --set configmaps.env=dev
+```
