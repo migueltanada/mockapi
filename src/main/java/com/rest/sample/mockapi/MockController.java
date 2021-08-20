@@ -29,10 +29,10 @@ public class MockController {
         
         
         MockResponseStatic mockResponse = new MockResponseStatic(
-            mock.getCode(),
+            mock.getMockCode(),
             mock.getMockDescription(),
             ServletUriComponentsBuilder.fromCurrentRequest().toUriString(),
-            mock.getStatus(),
+            mock.getMockStatus(),
             mock.getBody()
         );
 

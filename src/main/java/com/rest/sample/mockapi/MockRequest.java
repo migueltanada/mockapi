@@ -15,55 +15,56 @@ public class MockRequest {
 
     private Map<String,Object> mockBody;
 
-    public MockRequest ( String code, String description, int httpCode, String status, Map<String, Object> body){
+    public MockRequest ( String mockCode, String mockDescription, int mockHttpCode, String mockStatus, Map<String, Object> mockBody){
         
-        this.mockCode = code;
+        this.mockCode = mockCode;
 
-        this.mockDescription = description;
+        this.mockDescription = mockDescription;
 
-        this.mockHttpCode = httpCode;
+        this.mockHttpCode = mockHttpCode;
 
-        this.mockStatus = status;
+        this.mockStatus = mockStatus;
         
-        this.mockBody = body;
+        this.mockBody = mockBody;
         
     }
     
     public MockRequest (){}
-    public void setMockCode(String code){
-        this.mockCode = code;
+    
+    public void setMockCode(String mockCode){
+        this.mockCode = mockCode;
     }
 
-    public String getCode(){
+    public String getMockCode(){
        return mockCode;
     }
 
-    public void setMockDescription(String description){
-        this.mockDescription = description;
+    public void setMockDescription(String mockDescription){
+        this.mockDescription = mockDescription;
     }
 
     public String getMockDescription(){
        return mockDescription;
     }
 
-    public void setMockHttpCode(int httpCode){
-        this.mockHttpCode = httpCode;
+    public void setMockHttpCode(int mockHttpCode){
+        this.mockHttpCode = mockHttpCode;
     }
 
     public int getMockHttpCode(){
        return mockHttpCode;
     }
 
-    public void setMockStatus(String status){
-        this.mockStatus = status;
+    public void setMockStatus(String mockStatus){
+        this.mockStatus = mockStatus;
     }
 
-    public String getStatus(){
+    public String getMockStatus(){
        return mockStatus;
     }
 
-    public void setMockBody(Map<String, Object> body){
-        this.mockBody = body;
+    public void setMockBody(Map<String, Object> mockBody){
+        this.mockBody = mockBody;
     }
 
     public Map<String,Object> getBody(){
