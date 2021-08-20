@@ -106,11 +106,20 @@ Send whatever is in mongodb.
 # How to deploy/build
 
 ## deploy microservice
-1. ``helm template <release name> mockapi-helm | kubectl apply -f -`` or
-1. ``helm install <release name> mockapi-helm``
+There are five different ways you can express the chart you want to install:
 
-## deploy conifg
-1. lmoa i dont know how to yet
+Assuming:
+- release name: release1
+- chart name: mockapi
+- helm repo: https://github.com/migueltanada/helm_repo.git
+
+1. ~~By chart reference: helm install mymaria example/mariadb~~
+1. By path to a packaged chart: helm install release1 ./mockapi-1.1.1.tgz
+    - but first you hab to helm package that shit firt
+1. By path to an unpacked chart directory: helm install release1 helm\_repo/mockapi
+1. ~~By absolute URL: helm install release1 <to follow nalang HEHE>
+1. By chart reference and repo url: helm install --repo https://github.com/migueltanada/helm_repo release1 mockapi
+
 
 ## build
 1. ``docker build -t <image-name> .``
